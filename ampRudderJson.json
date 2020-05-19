@@ -1,0 +1,53 @@
+<amp-analytics>
+<script type="application/json">
+{
+  "transport": {
+    "beacon": false,
+    "xhrpost": false,
+    "image": true
+  },
+  "requestOrigin":"${dataPlaneUri}",
+  "requests": {
+  	"base":"?writeKey=${writeKey}&context.library.name=amp&anonymousId=${anonymousId}&context.locale=${browserLanguage}&context.userAgent=${userAgent}&context.page.path=${canonicalPath}&context.page.url=${canonicalUrl}&context.page.referrer=${documentReferrer}&context.page.title=${title}&context.screen.width=${screenWidth}&context.screen.height=${screenHeight}",
+    "page": {
+  		"baseUrl":"/pixel/v1/page${base}&properties.path=${canonicalPath}&properties.url=${canonicalUrl}&properties.referrer=${documentReferrer}&properties.title=${title}&name=${pageName}"
+	},
+    "track": {
+  		"baseUrl":"/pixel/v1/track${base}&event=${eventName}"
+	}
+  },
+  "vars": {
+    "dataPlaneUri": "https://88ac74d8.ngrok.io",
+    "writeKey": "1XI9Niof0vuKt5XTLurbWh9KkXn",
+    "anonymousId": "CLIENT_ID(uid)"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "page",
+      "vars":{
+	      "pageName": "new 1page"
+      },
+      "extraUrlParams": {
+  		  "properties.k1":"v2d3",
+        "properties.top1":"w3"
+  		}
+    },
+    "track": {
+      "on": "visible",
+      "request": "track",
+      "vars":{
+	      "eventName": "new event"
+      },
+      "extraUrlParams": {
+  		  "properties.k1":"v2d3",
+        "properties.top1":"32"
+  		}
+    }
+  },
+  "extraUrlParams": {
+  	"properties.product": "newProd"
+  }
+}
+</script>
+</amp-analytics>
