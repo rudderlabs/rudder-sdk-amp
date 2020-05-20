@@ -6,7 +6,7 @@
   },
   "requestOrigin": "${dataPlaneUrl}",
   "requests": {
-    "base": "?writeKey=${writeKey}&context.library.name=Rudderstack AMP SDK&&context.library.version=1.0.0&context.platform=AMP&anonymousId=${anonymousId}&context.locale=${browserLanguage}&context.userAgent=${userAgent}&context.page.path=${canonicalPath}&context.page.url=${canonicalUrl}&context.page.referrer=${documentReferrer}&context.page.title=${title}&context.screen.width=${screenWidth}&context.screen.height=${screenHeight}",
+    "base": "?writeKey=${writeKey}&context.library.name=Rudderstack AMP SDK&context.library.version=1.0.0&context.platform=AMP&anonymousId=${anonymousId}&context.locale=${browserLanguage}&context.userAgent=${userAgent}&context.page.path=${canonicalPath}&context.page.url=${canonicalUrl}&context.page.referrer=${documentReferrer}&context.page.title=${title}&context.screen.width=${screenWidth}&context.screen.height=${screenHeight}",
     "page": {
       "baseUrl": "/pixel/v1/page${base}&properties.path=${canonicalPath}&properties.url=${canonicalUrl}&properties.referrer=${documentReferrer}&properties.title=${title}&name=${pageName}"
     },
