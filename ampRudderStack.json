@@ -20,10 +20,7 @@
   "triggers": {
     "pageView": {
       "on": "visible",
-      "request": "page",
-      "vars": {
-        "pageName": "new page"
-      }
+      "request": "page"
     }
   },
   "linkers": {
