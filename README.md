@@ -5,7 +5,7 @@ Rudder is an enterprise-ready, open-source alternative to Segment, for collectin
 # Analytics for AMP
 
 You can use RudderStack's `amp-analytics` component to send event data from your AMP page, directly to Rudderstack and eventually to your configured destinations.
-Only Cloud mode destinations are supported as AMP directly sends data to our Server-side APIs,we then send this data to your configured destinations.
+Only Cloud mode destinations are supported as AMP directly sends data to our Server-side APIs, we then send this data to your configured destinations.
 ## How to use RudderStack with `amp-analytics`?
 
 This Quick Start Guide will help you get up and running with using RudderStack's `amp-analytics` component in no time. You just need to follow the steps below:
@@ -29,7 +29,7 @@ This Quick Start Guide will help you get up and running with using RudderStack's
    ```
 	A page call is automatically sent when you include this snippet in your AMP page.
 	
-	Make sure you replace `WRITE_KEY` and `DATA_PLANE_URL` with your own values.Refer to LINK_TO_AMP_DOC for instructions on how to get these values.
+	Make sure you replace `WRITE_KEY` and `DATA_PLANE_URL` with your own values.Refer to the [documentation](https://docs.rudderstack.com/sdk-integration-guide/getting-started-with-javascript-sdk/amp-analytics) for instructions on how to get these values.
 
 ## Hosting RudderStack's `amp-analytics` configuration JSON
 
