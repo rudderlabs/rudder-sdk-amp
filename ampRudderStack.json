@@ -12,6 +12,14 @@
     },
     "track": {
       "baseUrl": "/pixel/v1/track${base}&event=${eventName}"
+    },
+    "lotame1": {
+   	  "origin": "https://sync-tm.everesttech.net",
+      "baseUrl": "/upi/pid/bsTd8NdE?redir=https://sync.crwdcntrl.net/map/c=1811/tp=TBMG/tpid=${userId}"
+    },
+    "lotame2": {
+   	  "origin": "https://ib.adnxs.com",
+      "baseUrl": "/getuid?http://sync.crwdcntrl.net/map/c=281/rand=${random}/tpid=$UID/tp=ANXS"
     }
   },
   "vars": {
@@ -21,7 +29,7 @@
   "triggers": {
     "pageView": {
       "on": "visible",
-      "request": "page"
+      "request": ["page", "lotame1", "lotame2"]
     }
   },
   "linkers": {
