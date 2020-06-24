@@ -31,7 +31,7 @@
       },
       "lotame5": {
           "origin": "https://ib.adnxs.com",
-          "baseUrl": "/getuid?http://sync.crwdcntrl.net/map/c=281/rand=${random}/tpid=${userId}/tp=ANXS"
+          "baseUrl": "/getuid?https://sync.crwdcntrl.net/map/c=281/rand=${random}/tpid=${userId}/tp=ANXS"
       },
       "lotame6": {
           "origin": "https://match.adsrvr.org",
