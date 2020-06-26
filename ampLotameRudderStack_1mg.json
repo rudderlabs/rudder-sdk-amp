@@ -1,76 +1,81 @@
 {
   "transport": {
-      "beacon": false,
-      "xhrpost": false,
-      "image": true
+    "beacon": false,
+    "xhrpost": false,
+    "image": true
   },
   "requestOrigin": "${dataPlaneUrl}",
   "requests": {
-      "base": "?writeKey=${writeKey}&context.library.name=Rudderstack AMP SDK&context.library.version=1.0.0&context.platform=AMP&anonymousId=${anonymousId}&context.locale=${browserLanguage}&context.userAgent=${userAgent}&context.page.path=${canonicalPath}&context.page.url=${canonicalUrl}&context.page.referrer=${documentReferrer}&context.page.title=${title}&context.screen.width=${screenWidth}&context.screen.height=${screenHeight}",
-      "page": {
-          "baseUrl": "/pixel/v1/page${base}&properties.path=${canonicalPath}&properties.url=${canonicalUrl}&properties.referrer=${documentReferrer}&properties.title=${title}&name=${pageName}"
-      },
-      "track": {
-          "baseUrl": "/pixel/v1/track${base}&event=${eventName}"
-      },
-      "lotame1": {
-          "origin": "https://bcp.crwdcntrl.net",
-          "baseUrl": "/5/c=14830/b=77419654"
-      },
-      "lotame2": {
-          "origin": "https://sync.crwdcntrl.net",
-          "baseUrl": "/map/c=14830/tp=UOMG/tpid=${userId}"
-      },
-      "lotame3": {
-          "origin": "https://cm.g.doubleclick.net",
-          "baseUrl": "/pixel?google_nid=lotameddp&google_cm"
-      },
-      "lotame4": {
-          "origin": "https://sync-tm.everesttech.net",
-          "baseUrl": "/upi/pid/bsTd8NdE?redir=https://sync.crwdcntrl.net/map/c=1811/tp=TBMG/tpid=${userId}"
-      },
-      "lotame5": {
-          "origin": "https://ib.adnxs.com",
-          "baseUrl": "/getuid?https://sync.crwdcntrl.net/map/c=281/rand=${random}/tpid=${userId}/tp=ANXS"
-      },
-      "lotame6": {
-          "origin": "https://match.adsrvr.org",
-          "baseUrl": "/track/cmf/generic?ttd_pid=lotame&ttd_tpi=1&gdpr=${gdpr}${daisybit:&gdpr_consent=}"
-      },
-      "lotame7": {
-          "origin": "https://bcp.crwdcntrl.net",
-          "baseUrl": "/5/c=14830/rand=${random}/pv=y/rt=ifr"
-      }
+    "base": "?writeKey=${writeKey}&context.library.name=Rudderstack AMP SDK&context.library.version=1.0.0&context.platform=AMP&anonymousId=${anonymousId}&context.locale=${browserLanguage}&context.userAgent=${userAgent}&context.page.path=${canonicalPath}&context.page.url=${canonicalUrl}&context.page.referrer=${documentReferrer}&context.page.title=${title}&context.screen.width=${screenWidth}&context.screen.height=${screenHeight}",
+    "page": {
+      "baseUrl": "/pixel/v1/page${base}&properties.path=${canonicalPath}&properties.url=${canonicalUrl}&properties.referrer=${documentReferrer}&properties.title=${title}&name=${pageName}"
+    },
+    "track": {
+      "baseUrl": "/pixel/v1/track${base}&event=${eventName}"
+    },
+    "lotame1": {
+      "origin": "https://bcp.crwdcntrl.net",
+      "baseUrl": "/5/c=14830/b=77419654"
+    },
+    "lotame2": {
+      "origin": "https://sync.crwdcntrl.net",
+      "baseUrl": "/map/c=14830/tp=UOMG/tpid=${userId}"
+    },
+    "lotame3": {
+      "origin": "https://cm.g.doubleclick.net",
+      "baseUrl": "/pixel?google_nid=lotameddp&google_cm"
+    },
+    "lotame4": {
+      "origin": "https://sync-tm.everesttech.net",
+      "baseUrl": "/upi/pid/bsTd8NdE?redir=https://sync.crwdcntrl.net/map/c=1811/tp=TBMG/tpid=${userId}"
+    },
+    "lotame5": {
+      "origin": "https://ib.adnxs.com",
+      "baseUrl": "/getuid?https://sync.crwdcntrl.net/map/c=281/rand=${random}/tpid=${userId}/tp=ANXS"
+    },
+    "lotame6": {
+      "origin": "https://match.adsrvr.org",
+      "baseUrl": "/track/cmf/generic?ttd_pid=lotame&ttd_tpi=1&gdpr=${gdpr}${daisybit:&gdpr_consent=}"
+    },
+    "lotame7": {
+      "origin": "https://bcp.crwdcntrl.net",
+      "baseUrl": "/5/c=14830/rand=${random}/pv=y/rt=ifr"
+    },
+    "lotame8": {
+      "origin": "https://bcp.crwdcntrl.net",
+      "baseUrl": "/5/c=14830/b=81023198"
+    }
   },
   "vars": {
-      "anonymousId": "CLIENT_ID(rl_anonymous_id)"
+    "anonymousId": "CLIENT_ID(rl_anonymous_id)"
   },
   "triggers": {
-      "pageView": {
-          "on": "visible",
-          "request": [
-              "page",
-              "lotame1",
-              "lotame2",
-              "lotame3",
-              "lotame4",
-              "lotame5",
-              "lotame6",
-              "lotame7"
-          ]
-      }
+    "pageView": {
+      "on": "visible",
+      "request": [
+        "page",
+        "lotame1",
+        "lotame2",
+        "lotame3",
+        "lotame4",
+        "lotame5",
+        "lotame6",
+        "lotame7",
+        "lotame8"
+      ]
+    }
   },
   "linkers": {
-      "rudderstack": {
-          "ids": {
-              "rs_amp_id": "${anonymousId}"
-          },
-          "proxyOnly": false
-      }
+    "rudderstack": {
+      "ids": {
+        "rs_amp_id": "${anonymousId}"
+      },
+      "proxyOnly": false
+    }
   },
   "cookies": {
-      "rl_anonymous_id": {
-          "value": "LINKER_PARAM(rudderstack, rs_amp_id)"
-      }
+    "rl_anonymous_id": {
+      "value": "LINKER_PARAM(rudderstack, rs_amp_id)"
+    }
   }
 }
