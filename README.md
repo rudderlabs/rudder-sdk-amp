@@ -1,11 +1,15 @@
 # What is RudderStack?
 
-Rudder is an enterprise-ready, open-source alternative to Segment, for collecting and routing customer event data. More information on Rudder can be found [here](https://github.com/rudderlabs/rudder-server).
+[RudderStack](https://rudderstack.com/) is a **customer data pipeline** tool for collecting, routing and processing data from your websites, apps, cloud tools, and data warehouse.
 
-# Analytics for AMP
+More information on RudderStack can be found [here](https://github.com/rudderlabs/rudder-server).
+
+## Analytics for AMP
 
 You can use RudderStack's `amp-analytics` component to send event data from your AMP page, directly to Rudderstack and eventually to your configured destinations.
-Only Cloud mode destinations are supported as AMP directly sends data to our Server-side APIs, we then send this data to your configured destinations.
+
+Only Cloud mode destinations are supported as AMP directly sends data to our server-side APIs, we then send this data to your configured destinations.
+
 ## How to use RudderStack with `amp-analytics`?
 
 This Quick Start Guide will help you get up and running with using RudderStack's `amp-analytics` component in no time. You just need to follow the steps below:
@@ -49,4 +53,5 @@ Suppose you hosted your modified JSON at "https://example.com/modifiedConfig.jso
 If you just want to host the original configuration JSON yourself, just skip Step 2 in the above sequence.
 
 ## Contact Us
-If you come across any issues while configuring or using RudderStack, please feel free to [contact us](https://rudderstack.com/contact/) or start a conversation on our [Slack](https://resources.rudderstack.com/join-rudderstack-slack) channel. We will be happy to help you.
+
+If you come across any issues while configuring or using RudderStack with AMP Analytics, please feel free to start a conversation on our [Slack](https://resources.rudderstack.com/join-rudderstack-slack) channel. We will be happy to help you.
